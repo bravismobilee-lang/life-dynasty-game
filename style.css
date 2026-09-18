@@ -22,3 +22,6 @@ main{position:relative;z-index:1}
 
 /* v28 fixed-slot merge depot */
 #depot.active{display:flex;flex-direction:column;overflow:hidden!important}.artifactBoard{flex:1;height:auto!important;min-height:330px;max-height:560px}.artifactCell{padding:0;cursor:grab}.artifactCell.empty{border-style:dashed}.artifactCell:active{cursor:grabbing}.mergeNote{padding:8px 4px 4px;color:#8d8fa0;font-size:9px}
+
+/* v31 drag stability */
+.artifactGhost{will-change:left,top;pointer-events:none!important}.artifactCell.dragging{visibility:hidden!important}.artifactBoard{touch-action:none;overscroll-behavior:none}
