@@ -121,3 +121,22 @@ header{align-items:flex-start!important}.topActions{display:flex;gap:8px;align-i
 .cardProgress{margin:3px 10px!important;padding:6px 9px!important;height:46px!important}.cardProgress .cardBar{margin:5px 0 0!important}
 #life .tap{height:50px!important;min-height:50px!important;margin:4px 10px!important;width:calc(100% - 20px)!important;padding:0!important;align-self:center!important}
 @media(max-height:740px){#life .stage{grid-template-rows:34px minmax(0,1fr) 44px 48px 54px!important}.heroPortrait{height:62%!important}.heroName{font-size:11px!important}}
+
+/* v55 MAIN LIFE MODULE — Splide 4, fixed mobile game layout */
+#life{height:100%!important;overflow:hidden!important}
+#life .stage{height:100%!important;display:grid!important;grid-template-rows:38px minmax(0,1fr) 48px 52px 58px!important;overflow:hidden!important}
+#life .scene{height:auto!important;min-height:0!important;overflow:hidden!important}
+#person.heroDeck.splide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;transform:none!important;overflow:hidden!important;z-index:30!important;background:#10131f!important}
+#person .splide__track,#person .splide__list{height:100%!important}
+#person .splide__track{overflow:hidden!important;touch-action:pan-y!important}
+#person .heroTrack{display:flex!important;gap:0!important;position:static!important;width:auto!important}
+#person .heroCard.splide__slide{height:100%!important;width:100%!important;min-width:100%!important;margin:0!important;box-sizing:border-box!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;position:relative!important;border-radius:0!important;overflow:hidden!important}
+#person .heroPortrait{width:72%!important;height:70%!important;margin:0!important;position:relative!important;display:flex!important;align-items:flex-end!important;justify-content:center!important;border-radius:20px!important;overflow:hidden!important;background:radial-gradient(circle at 50% 42%,#4b315d,#171a27 65%,#0c0e15)!important}
+#person img.personArt{position:static!important;display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center bottom!important;background:none!important;transform:none!important;-webkit-user-drag:none!important;filter:drop-shadow(0 10px 14px #0009)!important}
+#person .heroPortrait i{position:absolute!important;right:7px!important;bottom:6px!important;font-size:34px!important;font-style:normal!important}
+#person .heroName{font-size:12px!important;margin:4px 0 0!important}#person .heroCard small{font-size:9px!important;margin:1px 0 15px!important}
+#person .splide__pagination{bottom:4px!important;gap:4px!important}#person .splide__pagination__page{width:6px!important;height:6px!important;margin:0 2px!important;background:#77798a!important;opacity:.65!important}#person .splide__pagination__page.is-active{width:18px!important;border-radius:8px!important;background:#a55cff!important;transform:none!important;opacity:1!important}
+.lifeActions{display:grid!important;grid-template-columns:1fr 82px!important;gap:6px!important;padding:4px 10px!important;background:#10131f!important}.feedHero,.miniAction{height:40px!important}
+.cardProgress{height:46px!important;margin:3px 10px!important;padding:6px 9px!important}.cardProgress .cardBar{margin:5px 0 0!important}
+#life .tap{height:50px!important;min-height:50px!important;margin:4px 10px!important;width:calc(100% - 20px)!important;padding:0!important}
+@media(max-height:740px){#life .stage{grid-template-rows:34px minmax(0,1fr) 44px 48px 54px!important}#person .heroPortrait{height:64%!important}}
