@@ -43,3 +43,6 @@ main{position:relative;z-index:1}
 
 /* v37 magnetic merge targeting */
 .artifactCell.mergeTarget{transform:scale(1.13)!important;box-shadow:inset 0 0 0 4px #e1b2ff,0 0 34px rgba(199,117,255,.95)!important}.artifactCell.dropTarget{box-shadow:inset 0 0 0 3px rgba(181,108,255,.85),0 0 22px rgba(181,108,255,.5)!important}
+
+/* v38 finger-locked drag + forgiving merge */
+.artifactCell.dragging{opacity:.98!important;pointer-events:none!important;transition:none!important;box-shadow:0 14px 42px rgba(0,0,0,.65),0 0 0 3px #c07aff,0 0 35px rgba(181,108,255,.9)!important}.artifactCell.mergeTarget{transform:scale(1.14)!important;animation:mergePulse .35s ease-in-out infinite alternate!important}
