@@ -28,3 +28,6 @@ main{position:relative;z-index:1}
 
 /* v32 native-element drag: no cloned ghosts */
 .artifactGhost{display:none!important}.artifactCell.dragging{visibility:visible!important;opacity:.95!important;transition:none!important;will-change:transform;pointer-events:auto}.artifactBoard{contain:layout paint;isolation:isolate;touch-action:none}
+
+/* v33 deterministic grid drag */
+.artifactCell.dragging{transform:translate3d(var(--dx,0),var(--dy,0),0) scale(1.06)!important;z-index:50!important;transition:none!important;will-change:transform}.artifactBoard{overflow:hidden!important}
