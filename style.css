@@ -37,3 +37,6 @@ main{position:relative;z-index:1}
 
 /* v35 drag feedback */
 .artifactCell.dragging{opacity:1!important;filter:brightness(1.25);box-shadow:0 0 0 3px #b56cff,0 0 28px rgba(181,108,255,.85)!important}.artifactCell.dropTarget{box-shadow:inset 0 0 0 3px rgba(181,108,255,.75),0 0 18px rgba(181,108,255,.35)!important}.artifactCell.mergeTarget{transform:scale(1.08);box-shadow:inset 0 0 0 3px #d9a2ff,0 0 28px rgba(199,117,255,.8)!important;animation:mergePulse .55s ease-in-out infinite alternate}@keyframes mergePulse{from{filter:brightness(1)}to{filter:brightness(1.45)}}
+
+/* v36 larger 5x5-feel slots + fluid drag */
+.artifactBoard{grid-template-columns:repeat(5,1fr)!important;grid-template-rows:repeat(6,1fr)!important;gap:7px!important;padding:9px!important;max-height:620px!important;min-height:470px!important}.artifactCell{min-width:0;min-height:0;border-radius:15px!important}.artifactCell span{font-size:clamp(25px,8vw,40px)!important}.artifactCell b{font-size:10px!important}.artifactCell.dragging{transition:transform 28ms linear!important;filter:brightness(1.28);box-shadow:0 10px 35px rgba(0,0,0,.5),0 0 0 3px #b56cff,0 0 32px rgba(181,108,255,.8)!important}.artifactCell.mergeTarget{transition:transform .12s ease!important}
