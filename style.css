@@ -19,3 +19,6 @@ nav{z-index:9999!important;pointer-events:auto!important}
 nav button,nav button span{pointer-events:auto!important;position:relative;z-index:10000}
 main{position:relative;z-index:1}
 #toast{pointer-events:none}
+
+/* v28 fixed-slot merge depot */
+#depot.active{display:flex;flex-direction:column;overflow:hidden!important}.artifactBoard{flex:1;height:auto!important;min-height:330px;max-height:560px}.artifactCell{padding:0;cursor:grab}.artifactCell.empty{border-style:dashed}.artifactCell:active{cursor:grabbing}.mergeNote{padding:8px 4px 4px;color:#8d8fa0;font-size:9px}
