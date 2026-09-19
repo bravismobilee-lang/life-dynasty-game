@@ -38,7 +38,7 @@ async function createOffer(){
 async function acceptOffer(){
   const token=new URLSearchParams(location.search).get('breed'),x=active();
   if(!token||!x)return;
-  setStatus('Проверяем карточки и создаём пару…');
+  setStatus('Проверяем редкость карточки и создаём пару…');
   try{
     const rows=await rpc('accept_breed_offer',{p_token:token,p_player_id:playerId(),p_card_index:x.index,p_card_level:x.card.level,p_rarity:x.meta.rarity});
     const row=Array.isArray(rows)?rows[0]:rows;
@@ -46,7 +46,7 @@ async function acceptOffer(){
     localStorage.setItem(KEY,JSON.stringify(S));render();
     setStatus('Скрещивание началось. Карточка заблокирована на 24 часа.');
     const btn=document.querySelector('#acceptBreed');if(btn)btn.hidden=true;
-  }catch(e){setStatus('Пара не создана: '+e.message)}
+  }catch(e){const msg=String(e.message||'');setStatus(msg.includes('CARD_MUST_MATCH_RARITY')||msg.includes('Level and rarity must match')?'Пара не создана: нужна карточка той же редкости.':'Пара не создана: '+msg)}
 }
 async function syncCard(card){
   if(!card.breedToken)return;
@@ -75,7 +75,7 @@ function init(){
     const modal=document.querySelector('#cardModal');if(modal)modal.classList.add('open');
     const input=document.querySelector('#breedLink');if(input)input.value=location.href;
     if(accept){accept.hidden=false;accept.onclick=acceptOffer}
-    setStatus('Выбери подходящего кота того же уровня и редкости, затем подтверди пару.');
+    setStatus('Выбери любого кота той же редкости, затем подтверди скрещивание. Уровень не важен.');
   }
   syncAll();setInterval(syncAll,30000);
 }
