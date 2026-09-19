@@ -169,3 +169,20 @@ header{align-items:flex-start!important}.topActions{display:flex;gap:8px;align-i
 #person .heroCard .rarity{position:absolute!important;top:14px!important;right:20px!important;z-index:4!important}
 #person .heroCard small{position:absolute!important;bottom:10px!important;margin:0!important;z-index:4!important}
 @media(max-height:740px){#person .heroPortrait{width:min(72%,310px)!important}}
+
+/* v63 — card art itself already contains a tall card; fill the game's art viewport */
+#person .heroPortrait{
+  width:min(82%,360px)!important;
+  height:100%!important;
+  max-height:100%!important;
+  aspect-ratio:auto!important;
+  border-radius:20px!important;
+}
+#person img.personArt{
+  position:absolute!important;inset:0!important;
+  width:100%!important;height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+#person .heroCard.splide__slide{padding:42px 18px 28px!important}
+@media(max-height:740px){#person .heroPortrait{width:min(78%,330px)!important;height:100%!important}}
