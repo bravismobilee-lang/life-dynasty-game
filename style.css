@@ -186,3 +186,7 @@ header{align-items:flex-start!important}.topActions{display:flex;gap:8px;align-i
 }
 #person .heroCard.splide__slide{padding:42px 18px 28px!important}
 @media(max-height:740px){#person .heroPortrait{width:min(78%,330px)!important;height:100%!important}}
+
+/* v64 — transparent five-cat collection */
+#person .heroPortrait{background:transparent!important;box-shadow:none!important;overflow:visible!important}
+#person img.personArt{object-fit:contain!important;object-position:center bottom!important;filter:none!important;transform:none!important}
