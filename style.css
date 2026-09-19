@@ -254,3 +254,14 @@ nav span{font-size:8px}
 .breedLink button{flex:0 0 auto!important;padding:0 14px!important}
 .breedStatus{overflow-wrap:anywhere!important;word-break:break-word!important;font-size:13px!important;line-height:1.35!important}
 #cardLv{white-space:nowrap!important}
+
+
+/* v80 — mobile breeding sheet: keep every control inside the screen */
+.cardModal{justify-content:center!important;align-items:flex-end!important;padding:0!important;overflow:hidden!important}
+.cardSheet{margin:0 auto!important;width:100%!important;max-width:560px!important;max-height:78dvh!important;padding:20px 16px calc(22px + env(safe-area-inset-bottom))!important;overflow-y:auto!important;overflow-x:hidden!important}
+.cardSheet>button{position:static!important;width:auto!important;height:auto!important;border-radius:12px!important;font-size:10px!important}
+.cardSheet>#closeCard{position:absolute!important;right:12px!important;top:10px!important;width:34px!important;height:34px!important;border-radius:50%!important;font-size:22px!important;z-index:3!important}
+.cardSheet>#acceptBreed,.cardSheet>#openBreedGroup{position:static!important;width:100%!important;height:auto!important;margin-top:10px!important;padding:13px!important}
+.cardSheet .breedLink{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;width:100%!important}
+.cardSheet .breedLink input{width:100%!important;min-width:0!important}
+.cardSheet .breedLink button{white-space:nowrap!important}
