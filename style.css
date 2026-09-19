@@ -147,3 +147,25 @@ header{align-items:flex-start!important}.topActions{display:flex;gap:8px;align-i
 #person.hit,.person.hit{animation:none!important;transform:none!important}
 #tap:active{transform:scale(.985)!important}
 @media(max-height:740px){#life .stage{grid-template-rows:34px minmax(0,1fr) 28px 48px 54px!important}.energyRegen{height:28px}}
+
+/* v62 — game-ready 600x800 cat cards: fill the existing carousel frame */
+#person .heroCard.splide__slide{padding:14px 18px 18px!important;justify-content:center!important}
+#person .heroPortrait{
+  width:min(82%,360px)!important;
+  height:auto!important;
+  aspect-ratio:3/4!important;
+  margin:0!important;
+  border-radius:22px!important;
+  overflow:hidden!important;
+  background:#0c0e15!important;
+  box-shadow:0 18px 42px #0008!important;
+}
+#person img.personArt{
+  position:absolute!important;inset:0!important;
+  width:100%!important;height:100%!important;
+  object-fit:cover!important;object-position:center center!important;
+  transform:none!important;filter:none!important;
+}
+#person .heroCard .rarity{position:absolute!important;top:14px!important;right:20px!important;z-index:4!important}
+#person .heroCard small{position:absolute!important;bottom:10px!important;margin:0!important;z-index:4!important}
+@media(max-height:740px){#person .heroPortrait{width:min(72%,310px)!important}}
