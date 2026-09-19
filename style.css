@@ -190,3 +190,15 @@ header{align-items:flex-start!important}.topActions{display:flex;gap:8px;align-i
 /* v64 — transparent five-cat collection */
 #person .heroPortrait{background:transparent!important;box-shadow:none!important;overflow:visible!important}
 #person img.personArt{object-fit:contain!important;object-position:center bottom!important;filter:none!important;transform:none!important}
+
+/* v69 — Depot drag must not scroll/pan the page */
+#depot.active{overscroll-behavior:none!important}
+#mergeBoard,#mergeBoard .artifactCell{
+  touch-action:none!important;
+  -webkit-user-select:none!important;
+  user-select:none!important;
+  -webkit-touch-callout:none!important;
+}
+#mergeBoard{overscroll-behavior:contain!important}
+#mergeBoard .artifactCell{cursor:grab}
+#mergeBoard .artifactCell.draggingLive{cursor:grabbing}
