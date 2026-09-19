@@ -202,3 +202,13 @@ header{align-items:flex-start!important}.topActions{display:flex;gap:8px;align-i
 #mergeBoard{overscroll-behavior:contain!important}
 #mergeBoard .artifactCell{cursor:grab}
 #mergeBoard .artifactCell.draggingLive{cursor:grabbing}
+
+/* v70 — rank row was removed: scene must take its grid row */
+#life .stage{
+  grid-template-rows:minmax(0,1fr) 28px 48px 54px!important;
+}
+#life .stageHead{display:none!important}
+#life .scene{grid-row:1!important;min-height:0!important;height:auto!important}
+#life .energyRegen{grid-row:2!important}
+#life .cardProgress{grid-row:3!important}
+#life #tap{grid-row:4!important}
