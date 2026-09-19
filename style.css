@@ -232,3 +232,8 @@ header{align-items:flex-start!important}.topActions{display:flex;gap:8px;align-i
 .taskBar i{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,#7049ed,#bd78ff)}
 nav button{min-width:0;padding:0 2px}
 nav span{font-size:8px}
+
+
+/* v77 — breeding group */
+.breedGroup{width:100%;margin:9px 0 0;border:1px solid #7653ae;border-radius:12px;padding:12px;background:linear-gradient(135deg,#2b2140,#191725);color:#c8a7ff;font-size:10px;font-weight:1000;letter-spacing:.3px}
+.breedGroup:active{transform:scale(.985)}
