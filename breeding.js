@@ -33,7 +33,7 @@ async function createOffer(){
     const link=SITE+'?breed='+encodeURIComponent(token);
     if(input)input.value=link;
     setStatus('Ссылка готова. Скопируй её и отправь в группу.');
-  }catch(e){setStatus('Не удалось создать ссылку: '+e.message)}
+  }catch(e){setStatus('Ссылка на скрещивание временно недоступна. Карточка и её уровень сохранены.')}
 }
 async function acceptOffer(){
   const token=new URLSearchParams(location.search).get('breed'),x=active();
