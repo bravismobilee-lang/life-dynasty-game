@@ -45,7 +45,7 @@ begin
   if not found then raise exception 'Offer not found'; end if;
   if v.status <> 'OPEN' then raise exception 'Offer is not open'; end if;
   if v.owner_id=p_player_id then raise exception 'Cannot pair with yourself'; end if;
-  if v.card_level<>p_card_level or v.rarity<>upper(p_rarity) then raise exception 'Level and rarity must match'; end if;
+  if v.rarity<>upper(p_rarity) then raise exception 'CARD_MUST_MATCH_RARITY'; end if;
   v_end:=now()+interval '24 hours';
   update breed_offers set partner_id=p_player_id,partner_card_index=p_card_index,status='BREEDING',completes_at=v_end where token=p_token;
   return query select v_end;
